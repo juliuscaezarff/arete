@@ -61,12 +61,9 @@ export function TeamSection() {
     <section className="w-full py-12 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col gap-4 mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl">
-            Nosso Time
+          <h2 className="text-5xl font-medium tracking-tighter text-center text-white">
+            Time
           </h2>
-          <p className="text-gray-500 text-center md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Conheça os profissionais por trás dos projetos
-          </p>
         </div>
         <div className="flex flex-col gap-12 max-w-5xl mx-auto">
           {teamMembers.map((member, index) => (
