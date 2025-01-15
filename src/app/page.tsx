@@ -1,11 +1,12 @@
 'use client'
 
-import { useLayoutEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
 import StartPage from '@/components/ui/start-page'
 import Preloader from '@/components/preloader'
 import Hero from '@/components/hero'
 import { gsap } from 'gsap'
 import { useLoader } from '@/lib/loader-provider'
+import Lenis from 'lenis'
 
 export default function Home() {
   const { loaderFinished, setLoaderFinished } = useLoader()
@@ -20,7 +21,24 @@ export default function Home() {
     })
     return () => context.revert()
   }, [setLoaderFinished])
-  
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2
+    })
+
+    function raf(time: number) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    return () => {
+      lenis.destroy()
+    }
+  }, [])
+
   return (
     <main>
       {loaderFinished ? (
