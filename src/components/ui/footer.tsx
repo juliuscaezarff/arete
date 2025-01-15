@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Instagram, DribbbleIcon as Behance, Info } from 'lucide-react'
+import { Instagram, DribbbleIcon as Behance } from 'lucide-react'
 import Image from "next/image"
 import { Container } from "./craft"
 

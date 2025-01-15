@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { InfiniteSlider } from './infinite-slider'
 
 export function InfiniteSliderBasic() {
@@ -11,34 +12,46 @@ export function InfiniteSliderBasic() {
 
           <div className="max-w-[670px] mx-auto">
             <InfiniteSlider gap={100} reverse>
-              <img
+              <Image
                 src="/ethereum-logo.svg"
                 alt="Apple Music logo"
+                width={30}
+                height={30}
                 className="h-[30px] w-auto"
               />
-              <img
+              <Image
                 src="/google-icon.svg"
                 alt="Chrome logo"
+                width={30}
+                height={30}
                 className="h-[30px] w-auto"
               />
-              <img
+              <Image
                 src="/nasa-logo.svg"
                 alt="Strava logo"
+                width={30}
+                height={30}
                 className="h-[30px] w-auto"
               />
-              <img
+              <Image
                 src="/nike-logo.svg"
                 alt="Nintendo logo"
+                width={30}
+                height={30}
                 className="h-[30px] w-auto"
               />
-              <img
+              <Image
                 src="/nokia-logo.svg"
                 alt="Jquery logo"
+                width={30}
+                height={30}
                 className="h-[30px] w-auto"
               />
-              <img
+              <Image
                 src="/telegram-logo.svg"
                 alt="Prada logo"
+                width={30}
+                height={30}
                 className="h-[30px] w-auto"
               />
             </InfiniteSlider>
