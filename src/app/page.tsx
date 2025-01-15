@@ -5,9 +5,10 @@ import StartPage from '@/components/ui/start-page'
 import Preloader from '@/components/preloader'
 import Hero from '@/components/hero'
 import { gsap } from 'gsap'
+import { useLoader } from '@/lib/loader-provider'
 
 export default function Home() {
-  const [loaderFinished, setLoaderFinished] = useState(false)
+  const { loaderFinished, setLoaderFinished } = useLoader()
   const [timeline, setTimeline] = useState<gsap.core.Timeline | null>(null)
 
   useLayoutEffect(() => {
