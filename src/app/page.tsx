@@ -18,9 +18,9 @@ export default function Home() {
       })
       setTimeline(tl)
     })
-
     return () => context.revert()
-  }, [])
+  }, [setLoaderFinished])
+  
   return (
     <main>
       {loaderFinished ? (
