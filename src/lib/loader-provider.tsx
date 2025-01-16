@@ -1,6 +1,8 @@
 'use client'
 
 import { Footer } from '@/components/ui/footer'
+import Header from '@/components/ui/navbar'
+import { TooltipProvider } from '@/components/ui/tooltip'
 import { createContext, useContext, useState } from 'react'
 
 const LoaderContext = createContext({
@@ -13,10 +15,14 @@ export function LoaderProvider({ children }: any) {
 
   return (
     <LoaderContext.Provider value={{ loaderFinished, setLoaderFinished }}>
-      {/* {loaderFinished && <Header />} */}
-      {children}
-      {loaderFinished && <Footer />}
-    </LoaderContext.Provider>
+    {loaderFinished && (
+      <TooltipProvider>
+        <Header />
+      </TooltipProvider>
+    )}
+    {children}
+    {loaderFinished && <Footer />}
+  </LoaderContext.Provider>
   )
 }
 
