@@ -51,7 +51,7 @@ export default function Header() {
 
             <Tooltip delayDuration={0}>
               <TooltipTrigger asChild>
-                <Link href="/about">
+                <Link href="/about" className={linkStyles}>
                   <GripIcon />
                 </Link>
               </TooltipTrigger>
