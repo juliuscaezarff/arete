@@ -1,5 +1,7 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import { Card, CardContent } from './card'
+import { Separator } from './separator'
+import { Button } from './button'
 
 interface Project {
   id: number
@@ -49,32 +51,44 @@ const projects: Project[] = [
 
 export function ProjectsSection() {
   return (
-    <section className="w-full">
-      <div className="container px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {projects.map(project => (
-            <Link
-              key={project.id}
-              href="#"
-              className="group relative aspect-square overflow-hidden rounded-xl bg-gray-100 hover:bg-gray-200 transition-colors"
-            >
-              <Image
-                src={project.image}
-                alt={project.title}
-                className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                width={600}
-                height={600}
-              />
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <p className="text-sm font-medium">{project.year}</p>
-                  <h3 className="text-lg font-bold">{project.title}</h3>
+    <div className="w-full sm:px-8 lg:px-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map(project => (
+          <div key={project.id} className="w-full mb-5">
+            <Card className="border-0 shadow-none bg-transparent">
+              <CardContent className="p-0">
+                <div className="relative aspect-square w-full overflow-hidden rounded-lg mb-4">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={400}
+                    height={400}
+                    className="object-cover w-full h-full"
+                  />
                 </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+                <div className="space-y-4">
+                  <h2 className="text-3xl font-light tracking-wide text-white">
+                    {project.title}
+                  </h2>
+                  <Separator className="bg-muted-foreground/30" />
+                  <div className="space-y-1 text-sm text-muted-foreground uppercase tracking-wider">
+                    <p>PROJETO</p>
+                    <div className="flex justify-between items-center">
+                      <p>SETOR: DESIGN</p>
+                      <p>{project.year}</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        ))}
       </div>
-    </section>
+      <div className="flex justify-center mt-16 sm:mt-24 lg:mt-32">
+        <Button variant="outline" size="lg">
+          Mais projetos
+        </Button>
+      </div>
+    </div>
   )
 }

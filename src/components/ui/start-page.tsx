@@ -8,8 +8,8 @@ import { TeamSection } from './team-section'
 export default function StartPage() {
   return (
     <Section>
+      <ProjectsSection />
       <Container>
-        <ProjectsSection />
         <InfiniteSliderBasic />
         <MethodologySection />
         <DeliverablesSection />
