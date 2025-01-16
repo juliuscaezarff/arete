@@ -48,11 +48,6 @@ export function DeliverablesSection() {
               key={item.id}
               className="relative p-6 rounded-2xl border border-[#444444] group"
             >
-              <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full border border-[#333333] bg-black flex items-center justify-center">
-                <span className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
-                  {item.number}
-                </span>
-              </div>
               <div className="mt-4">
                 <h3 className="text-xl font-semibold mb-2 text-white">
                   {item.title}
