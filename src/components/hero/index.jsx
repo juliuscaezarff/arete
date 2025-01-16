@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import Image from 'next/image'
 import { animateTitle, animateImage, revealMenu } from './animation'
+import { Button } from '../ui/button'
 
 const Hero = () => {
   const timeline = useRef(gsap.timeline())
@@ -26,7 +26,6 @@ const Hero = () => {
     >
       <div className="relative w-full -mt-32">
         {' '}
-        {/* Adicionado margin top negativa para subir */}
         <h1 className="w-[calc(100%-8rem)] mx-16 grid grid-cols-[max-content_1fr_max-content] items-center gap-[3.2rem]">
           <span
             data-hidden
@@ -47,36 +46,19 @@ const Hero = () => {
             studio
           </span>
         </h1>
-        {/* Container para texto e seta - Agora centralizado */}
-        <div className="flex flex-col items-center gap-8 mt-20" data-hidden>
-          <p className="text-white/80 text-5xl max-w-[550px] text-center tracking-normal">
+        <div
+          className="absolute right-16 flex flex-col items-start gap-8 mt-20 w-[400px]"
+          data-hidden
+        >
+          <p className="text-white/80 text-3xl w-full text-left tracking-normal">
             Transforme sua marca em líder de mercado
           </p>
 
-          <div
-            className="cursor-pointer animate-bounce mt-8"
-            onClick={() =>
-              window.scrollTo({
-                top: window.innerHeight,
-                behavior: 'smooth'
-              })
-            }
-          >
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 24 24"
-              fill="none"
-              className="text-white"
-              stroke="currentColor"
-              strokeWidth="1"
-            >
-              <path
-                d="M12 5v14M5 12l7 7 7-7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+          <div className="flex gap-4 w-full">
+            <Button variant="outline" className="flex-1">
+              Fale conosco
+            </Button>
+            <Button className="flex-1">Projetos</Button>
           </div>
         </div>
       </div>
