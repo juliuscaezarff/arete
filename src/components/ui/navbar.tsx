@@ -6,6 +6,7 @@ import { Button } from './button'
 import { HomeIcon } from './home-icon'
 import { WorkflowIcon } from './workflow-icon'
 import { LayersIcon } from './layers'
+import { GripIcon } from './grip-icon'
 
 const linkStyles =
   'relative flex h-9 w-9 shrink-0 scale-100 select-none appearance-none items-center justify-center rounded-lg text-zinc-500 transition-colors   focus-visible:ring-2 active:scale-[0.98]'
@@ -51,7 +52,7 @@ export default function Header() {
             <Tooltip delayDuration={0}>
               <TooltipTrigger asChild>
                 <Link href="/about">
-                  <LayersIcon />
+                  <GripIcon />
                 </Link>
               </TooltipTrigger>
               <TooltipContent side="bottom">
