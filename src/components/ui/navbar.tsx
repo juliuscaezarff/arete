@@ -6,7 +6,7 @@ import { Button } from './button'
 export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-4">
-      <div className="rounded-md border border-zinc-950/10 bg-[#111111] min-w-[650px]">
+      <div className="rounded-md border border-zinc-950/10 bg-opacity-10 backdrop-filter backdrop-blur-lg bg-white border-white border-opacity-20 min-w-[650px]">
         <div className="px-6 py-3 flex items-center justify-between">
           <div className="w-[100px]">
             <Link href="/" className="">
@@ -33,12 +33,12 @@ export default function Header() {
             >
               Projetos
             </Link>
-            <Link
+            {/* <Link
               href="/about"
               className="text-zinc-500 hover:text-zinc-100 transition-colors"
             >
               Sobre
-            </Link>
+            </Link> */}
             <Button variant="outline" size="sm">
               Inicie seu projeto
             </Button>

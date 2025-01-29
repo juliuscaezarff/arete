@@ -12,7 +12,6 @@ export default function StartPage() {
       <Hero />
       <ProjectsSection />
       <Container>
-        <InfiniteSliderBasic />
         <MethodologySection />
         <DeliverablesSection />
         <TeamSection />

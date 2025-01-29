@@ -4,6 +4,7 @@ import './globals.css'
 import { LoaderProvider } from '@/lib/loader-provider'
 import Header from '@/components/ui/navbar'
 import { TooltipProvider } from '@/components/ui/tooltip'
+import { Footer } from '@/components/ui/footer'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -31,8 +32,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#000000]`}
       >
         <Header />
-
-        <main>{children}</main>
+          <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )

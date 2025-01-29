@@ -52,7 +52,7 @@ const projects: Project[] = [
 export function ProjectsSection() {
   return (
     <div className="w-full sm:px-8 lg:px-16">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {projects.map(project => (
           <div key={project.id} className="w-full mb-5">
             <Card className="border-0 shadow-none bg-transparent">
