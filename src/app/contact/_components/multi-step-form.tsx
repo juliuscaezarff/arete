@@ -31,6 +31,8 @@ export function MultiStepForm() {
     visualItems: [] as string[],
     additionalItems: [] as string[],
     foundUs: [] as string[],
+    investmentRange: [] as string[],
+    customInvestment: '',
     additionalInfo: ''
   })
 
