@@ -39,9 +39,11 @@ export default function Header() {
             >
               Sobre
             </Link> */}
-            <Button variant="outline" size="sm">
-              Inicie seu projeto
-            </Button>
+            <Link href='/contact'>
+              <Button variant="outline" size="sm">
+                Inicie seu projeto
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

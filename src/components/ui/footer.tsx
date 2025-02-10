@@ -6,7 +6,7 @@ import { Container } from "./craft"
 export function Footer() {
   return (
    <Container>
-     <footer className="w-full py-6 border-t relative">
+     <footer className="w-full pt-6 border-t relative">
       <div className="container px-4 md:px-6">
         <div className="flex justify-between items-center max-w-5xl mx-auto">
           <Link href="/" className="font-semibold">
