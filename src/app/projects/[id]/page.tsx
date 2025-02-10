@@ -8,12 +8,10 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function ProjectPage({
-  params
-}: {
-  params: { id: string }
+export default async function ProjectPage(props: {
+  params: Promise<{ id: string }>
 }) {
-  // Aguarda os parâmetros
+  const params = await props.params
   const id = await params.id
   const project = projects.find(p => p.id === parseInt(id))
 
