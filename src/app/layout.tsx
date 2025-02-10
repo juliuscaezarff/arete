@@ -5,6 +5,7 @@ import { LoaderProvider } from '@/lib/loader-provider'
 import Header from '@/components/ui/navbar'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { Footer } from '@/components/ui/footer'
+import { CTASection } from '@/components/ui/cta-section'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -32,7 +33,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#000000]`}
       >
         <Header />
-          <main>{children}</main>
+        <main>{children}</main>
+        <CTASection />
         <Footer />
       </body>
     </html>
